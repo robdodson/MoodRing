@@ -1,6 +1,5 @@
 require 'open-uri'
 require 'nokogiri'
-require 'awesome_print'
 
 @counts = Hash.new(0)
 

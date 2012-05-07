@@ -1,25 +1,17 @@
-require_relative 'crawler'
-require_relative 'options'
+require 'yaml'
+#require_relative 'crawler'
 
 module Tentacles
   class Runner
 
-    def initialize(argv)
-      @options = Options.new(argv)
+    attr_reader :config
+
+    def initialize(config)
+      @config = YAML.load(File.open(config))
     end
 
-    def run
-=begin      
-      finder = Finder.from_file(@options.dictionary)
-      @options.words_to_find.each do |word|
-        anagrams = finder.lookup(word)
-        if anagrams
-          puts "Anagrams of #{word}: #{anagrams.join(', ')}"
-        else
-          puts "No anagrams of #{word} in #{@options.dictionary}"
-        end
-      end
-=end    
+    def run      
+      'Runner should be running'
     end
   end
 end

@@ -1,5 +1,5 @@
 #! /usr/local/rubybook/bin/ruby
 
 require 'tentacles/runner'
-runner = Tentacles::Runner.new(ARGV)
+runner = Tentacles::Runner.new()
 runner.run
