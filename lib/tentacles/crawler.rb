@@ -8,15 +8,7 @@ module Tentacles
     attr_reader :doc
 
     def get(uri)
-      begin
-        @uri = URI.parse(uri)
-      rescue URI::BadURIError
-        puts 'BadURIError!'
-      rescue URI::InvalidURIError
-        puts 'InvalidURIError'
-      end
-      #raise "Missing uri!" if uri.nil? || uri.empty?
-
+      @uri = URI.parse(uri)
       #@doc = Nokogiri::HTML(open(@url))
     end
   end

@@ -1,2 +1,3 @@
-url: http://robdodson.me
-selector: .entry-content
+uri: http://robdodson.me
+post_selector: .entry-content
+metadata_selector: .personal-metadata

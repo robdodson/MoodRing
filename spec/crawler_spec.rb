@@ -8,16 +8,16 @@ describe Tentacles::Crawler do
 
   subject { @crawler }
 
-  it { should respond_to(:url) }
+  it { should respond_to(:uri) }
   it { should respond_to(:doc) }
 
-  describe "when passing the url" do
+  describe "when passing the uri" do
     it "should raise an error if empty" do
-      expect { @crawler.get('') }.to raise_error("Missing url!")
+      expect { c.get('') }.to raise_error("Missing url!")
     end
 
     it "should raise an error if nil" do
-      expect { @crawler.get(nil) }.to raise_error("Missing url!")
+      expect { @crawler.get(nil) }.to raise_error(URI::InvalidURIError)
     end
   end
 
