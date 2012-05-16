@@ -1,0 +1,3 @@
+uri: google.com
+post_selector: .entry-content
+metadata_selector: .personal-metadata

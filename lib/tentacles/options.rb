@@ -15,7 +15,7 @@ module Tentacles
       end
 
       @uri = URI.parse(@config["uri"])
-      raise IOError, 'invalid uri!' if @uri.scheme.nil? || @uri.host.nil?
+      raise IOError, 'Invalid uri!' if @uri.scheme.nil? || @uri.host.nil?
 
       @post_selector = @config["post_selector"]
       @metadata_selector = @config["metadata_selector"]
