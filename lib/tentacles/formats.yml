@@ -1,0 +1,5 @@
+time:     DateTimeFormat
+mood:     CollectionFormat
+sleep:    FloatFormat
+hunger:   FloatFormat
+coffee:   FloatFormat

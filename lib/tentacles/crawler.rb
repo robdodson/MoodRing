@@ -36,8 +36,7 @@ module Tentacles
       node = nodes_by_selector(selector).first
       metadata = {}
       node.children.each do |child|
-        key, *value = child.content.split(':')
-        puts "#{key}: #{value}"
+        p child.content
       end      
     end
 
